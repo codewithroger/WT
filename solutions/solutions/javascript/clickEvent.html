@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Event Example</title>
+  <style>
+    #output {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 200px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Click Event Example</h1>
+  <div id="output" >Click me!</div>
+
+  <script>
+    
+    function handleClick(event) {
+      // Update the content of the output div
+      const outputDiv = document.getElementById('output');
+
+      if (outputDiv.style.backgroundColor == 'lightgreen'){
+        outputDiv.textContent = 'Click me! Unclicked';
+        outputDiv.style.backgroundColor = 'lightblue';
+      }
+      else{
+        outputDiv.textContent = 'Clicked';
+        outputDiv.style.backgroundColor = 'lightgreen'; 
+      }
+    
+
+    }
+
+    // Add event listener for click event
+    const outputDiv = document.getElementById('output');
+    outputDiv.addEventListener('click', handleClick);
+  </script>
+</body>
+</html>

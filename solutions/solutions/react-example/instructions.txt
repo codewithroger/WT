@@ -1,0 +1,4 @@
+1. Install node.js
+2. Open this folder in terminal
+3. run `npm i` to install react and other modules
+4. run `npm start` to start the script

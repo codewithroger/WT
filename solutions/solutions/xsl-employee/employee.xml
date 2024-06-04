@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="emp-style.xsl" type="text/xsl"?>
+<employees>
+
+    <employee>
+        <id>1</id>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <position>Software Engineer</position>
+        <salary>85000</salary>
+        <department>Engineering</department>
+        <email>john.doe@example.com</email>
+    </employee>
+    <employee>
+        <id>2</id>
+        <firstName>Jane</firstName>
+        <lastName>Smith</lastName>
+        <position>Project Manager</position>
+        <salary>95000</salary>
+        <department>Project Management</department>
+        <email>jane.smith@example.com</email>
+    </employee>
+    <employee>
+        <id>3</id>
+        <firstName>Michael</firstName>
+        <lastName>Johnson</lastName>
+        <position>QA Engineer</position>
+        <salary>78000</salary>
+        <department>Quality Assurance</department>
+        <email>michael.johnson@example.com</email>
+    </employee>
+    <employee>
+        <id>4</id>
+        <firstName>Emily</firstName>
+        <lastName>Davis</lastName>
+        <position>Business Analyst</position>
+        <salary>80000</salary>
+        <department>Business Analysis</department>
+        <email>emily.davis@example.com</email>
+    </employee>
+    <employee>
+        <id>5</id>
+        <firstName>David</firstName>
+        <lastName>Wilson</lastName>
+        <position>DevOps Engineer</position>
+        <salary>87000</salary>
+        <department>Engineering</department>
+        <email>david.wilson@example.com</email>
+    </employee>
+    <employee>
+        <id>6</id>
+        <firstName>Sarah</firstName>
+        <lastName>Brown</lastName>
+        <position>UI/UX Designer</position>
+        <salary>76000</salary>
+        <department>Design</department>
+        <email>sarah.brown@example.com</email>
+    </employee>
+    <employee>
+        <id>7</id>
+        <firstName>James</firstName>
+        <lastName>Jones</lastName>
+        <position>Technical Writer</position>
+        <salary>72000</salary>
+        <department>Documentation</department>
+        <email>james.jones@example.com</email>
+    </employee>
+    <employee>
+        <id>8</id>
+        <firstName>Linda</firstName>
+        <lastName>Garcia</lastName>
+        <position>HR Specialist</position>
+        <salary>68000</salary>
+        <department>Human Resources</department>
+        <email>linda.garcia@example.com</email>
+    </employee>
+    <employee>
+        <id>9</id>
+        <firstName>Robert</firstName>
+        <lastName>Martinez</lastName>
+        <position>Marketing Manager</position>
+        <salary>89000</salary>
+        <department>Marketing</department>
+        <email>robert.martinez@example.com</email>
+    </employee>
+    <employee>
+        <id>10</id>
+        <firstName>Patricia</firstName>
+        <lastName>Miller</lastName>
+        <position>Data Scientist</position>
+        <salary>98000</salary>
+        <department>Data Science</department>
+        <email>patricia.miller@example.com</email>
+    </employee>
+
+</employees>

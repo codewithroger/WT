@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "sort.xsl"?> 
+
+<items>
+    <item>
+      <name>Item 1</name>
+      <price>20</price>
+    </item>
+    <item>
+      <name>Item 2</name>
+      <price>15</price>
+    </item>
+    <item>
+      <name>Item 3</name>
+      <price>25</price>
+    </item>
+    <item>
+      <name>Item 4</name>
+      <price>55</price>
+    </item>
+    <item>
+      <name>Item 5</name>
+      <price>69</price>
+    </item>
+    <item>
+      <name>Item 6</name>
+      <price>53</price>
+    </item>
+</items>

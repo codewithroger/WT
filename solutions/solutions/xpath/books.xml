@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet href="predicate.xsl" type="text/xsl"?> -->
+<!-- <?xml-stylesheet href="axes.xsl" type="text/xsl"?> -->
+<?xml-stylesheet href="functions.xsl" type="text/xsl"?>
+<bookstore>
+    <book category="fiction">
+        <title lang="en">Harry Potter</title>
+        <author>J.K. Rowling</author>
+        <year>2005</year>
+        <price>29.99</price>
+    </book>
+    <book category="non-fiction">
+        <title lang="en">Python Programming</title>
+        <author>John Doe</author>
+        <year>2020</year>
+        <price>39.95</price>
+    </book>
+    <book category="fiction">
+        <title lang="en">The Hobbit</title>
+        <author>J.R.R. Tolkien</author>
+        <year>1937</year>
+        <price>24.99</price>
+    </book>
+    <book category="non-fiction">
+        <title lang="en">Introduction to XML</title>
+        <author>Jane Smith</author>
+        <year>2015</year>
+        <price>19.95</price>
+    </book>
+    <book category="fiction">
+        <title lang="en">The Catcher in the Rye</title>
+        <author>J.D. Salinger</author>
+        <year>1951</year>
+        <price>14.99</price>
+    </book>
+</bookstore>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Event Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Focus Event Example</h1>
+    <form id="exampleForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <div id="info" class="info">
+        Focus information will appear here.
+    </div>
+
+    <script>
+
+        const infoDiv = document.getElementById('info');
+
+        // Function to handle focus event
+        function handleFocus(event) {
+            const element = event.target;
+            infoDiv.textContent = `Focused element: ${element.tagName} with id: ${element.id}`;
+        }
+
+        // Get all input elements and textarea
+        const formElements = document.querySelectorAll('#exampleForm input, #exampleForm textarea');
+
+        // Add focus event listener to each element
+        formElements.forEach(element => {
+            element.addEventListener('focus', handleFocus);
+        });
+        
+
+    </script>
+</body>
+</html>

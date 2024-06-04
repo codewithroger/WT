@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form Validation Example</h1>
+    <form id="exampleForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+
+        <label>
+            <input type="checkbox" id="terms" name="terms"> I agree to the terms and conditions
+        </label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <div id="errorMessages" class="error"></div>
+
+    <script >
+        
+            const form = document.getElementById('exampleForm');
+            const errorMessagesDiv = document.getElementById('errorMessages');
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent the form from submitting
+                errorMessagesDiv.innerHTML = ''; // Clear previous error messages
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const password = document.getElementById('password').value.trim();
+                const confirmPassword = document.getElementById('confirmPassword').value.trim();
+                const terms = document.getElementById('terms').checked;
+
+                let errorMessages = [];
+
+                // Validate name
+                if (name === '') {
+                    errorMessages.push('Name is required.');
+                }
+
+                // Validate email
+                if (email === '') {
+                    errorMessages.push('Email is required.');
+                } else if (!validateEmail(email)) {
+                    errorMessages.push('Email is not valid.');
+                }
+
+                // Validate password
+                if (password === '') {
+                    errorMessages.push('Password is required.');
+                } else if (password.length < 8) {
+                    errorMessages.push('Password must be at least 8 characters long.');
+                }
+
+                // Validate confirm password
+                if (confirmPassword === '') {
+                    errorMessages.push('Confirm Password is required.');
+                } else if (password !== confirmPassword) {
+                    errorMessages.push('Passwords do not match.');
+                }
+
+                // Validate terms and conditions
+                if (!terms) {
+                    errorMessages.push('You must agree to the terms and conditions.');
+                }
+
+                // Display error messages or submit form
+                if (errorMessages.length > 0) {
+                    displayErrorMessages(errorMessages);
+                } else {
+                    alert('Form submitted successfully!');
+                    form.submit(); // You can remove this line if you do not want to actually submit the form
+                }
+            });
+
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex to test the email, you may prolly copy from the internet in practicals if they allow you
+                return re.test(email);
+            }
+
+            function displayErrorMessages(messages) {
+                messages.forEach(message => {
+                    const div = document.createElement('div');
+                    div.textContent = message;
+                    errorMessagesDiv.appendChild(div);
+                });
+            }
+        
+
+    </script>
+</body>
+</html>

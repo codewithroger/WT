@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Window Events Example</h1>
+    <div id="resizeInfo" class="info">
+        Resize information will appear here.
+    </div>
+    <div id="scrollInfo" class="info">
+        Scroll information will appear here.
+    </div>
+    <div id="loadInfo" class="info">
+        Page load information will appear here.
+    </div>
+
+    <script>
+
+        
+            const resizeInfoDiv = document.getElementById('resizeInfo');
+            const scrollInfoDiv = document.getElementById('scrollInfo');
+            const loadInfoDiv = document.getElementById('loadInfo');
+
+            // Handle window resize event
+            function handleResize() {
+                resizeInfoDiv.textContent = `Window resized to width: ${window.innerWidth}, height: ${window.innerHeight}`;
+            }
+
+            // Handle window scroll event
+            function handleScroll() {
+                scrollInfoDiv.textContent = `Window scrolled to position: ${window.scrollX}, ${window.scrollY}`;
+            }
+
+            // Handle window load event
+            function handleLoad() {
+                loadInfoDiv.textContent = 'Page fully loaded at ' + new Date().toLocaleTimeString();
+            }
+
+            // Add event listeners for window events
+            window.addEventListener('resize', handleResize);
+            window.addEventListener('scroll', handleScroll);
+            window.addEventListener('load', handleLoad);
+
+            
+            handleLoad();
+        
+
+    </script>
+</body>
+</html>
