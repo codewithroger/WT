@@ -1,0 +1,23 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:stretchColumns="*">
+
+    <TableRow>
+        <TextView android:text="Name" />
+        <EditText android:hint="Enter Name" />
+    </TableRow>
+
+    <TableRow>
+        <TextView android:text="Email" />
+        <EditText android:hint="Enter Email" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:layout_span="2"
+            android:text="Submit" />
+    </TableRow>
+</TableLayout>
